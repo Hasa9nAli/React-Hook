@@ -33,17 +33,21 @@ email : 'name@example.com'
   ]);
   // this function that take event and index 
   // the event from onClick={} and the index from map function 
-  const deleteFun = (event, index) => {
+  const deleteFun = (event, indexClicked) => {
     event.preventDefault();
     // return all the elements without the element that index of this element = index of the list
-    setList(list.filter((item, i) => i !== index));
+   
+    // first way => {
+   /* setList(list.filter((item, i) => i !== index)); */ 
+    // second way => {
+      setList((prevState)=> prevState.filter((item,arrayIndex ) => arrayIndex !==indexClicked ))
     // to show the changes 
-    console.log(list) 
+    // this console hold the value of prevState
+    console.log('inside =>',list) 
       
-    
   }
-        
-      
+  // this console loss the previous state
+  console.log('out side => ',list)
     
 
   
