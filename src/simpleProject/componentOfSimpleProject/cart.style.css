@@ -1,0 +1,28 @@
+* {
+    padding: 0; 
+    margin: 0
+}
+.cartContainer{
+    margin-top:10px; 
+    padding: 12px ; 
+    display: block;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #a0fca8;
+    position: relative;
+}
+.remove{
+    color: red;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute  ;
+    top: -10px;
+    right: 10px;
+}

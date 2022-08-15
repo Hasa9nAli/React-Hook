@@ -7,3 +7,6 @@
 
 ##### "Only call Hook from React Functions"
     - call them from within react functional component and not just anu regular javascript  function 
+
+##### in the file of simpleProject
+    - there is sub program to remove the element using filtering element when clicked the the X button 
