@@ -4,7 +4,8 @@ import './cart.style.css';
 // cart element has 2 props 
 // nameList = {list} => the list of the all element 
 // deleteFun ={deleteFun} => to pass the event and the index of element who it clicked
-const  Cart =({nameList,deleteFun}) =>{
+const  Cart =({nameList,deleteFun }) =>{
+    
     // i make destructuring the name list props as the element 
     // nameList = List => the list of the all element
     // nameList = [{name : '' , age , id , phone , email}];

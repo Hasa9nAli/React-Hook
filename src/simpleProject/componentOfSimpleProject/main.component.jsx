@@ -1,7 +1,9 @@
-import React,{useState} from 'react'; 
+import React,{useState,  useRef} from 'react'; 
 import style from './main.style.css';
 import Cart from './cart.component';
 function Main() {
+  const inputElement = useRef(null)
+  const [toggleFlag , setToggleFlag] = useState(true);
   const [list , setList] = useState([
     {name: 'hasan'
     ,age: 20
@@ -46,17 +48,40 @@ email : 'name@example.com'
     console.log('inside =>',list) 
       
   }
+  // change the value of toggleFlag
+  const toggle = () => {
+    setToggleFlag(!toggleFlag);
+  } 
   // this console loss the previous state
   console.log('out side => ',list)
+  // using the useRef to focus the input element 
+  const focusRef = () =>{
+    inputElement.current.focus()
+  }
+  const catchValueOfInput =()=> { 
+    console.log(inputElement.current.value)
     
+
+  }
 
   
   return (
     
     <div className='containerCartMain'>
         {/*sent the deleteFun as props */}
-        <Cart nameList = {list} deleteFun ={deleteFun}  />
-      
+        <button 
+        className='StartMenu' 
+        onClick={()=> setToggleFlag(!toggleFlag)}>
+        {toggleFlag ? 'hide item' : 'Show Item'}
+        </button>
+        <div>
+          <input type='text' placeholder='handle text' ref={inputElement} onChange={catchValueOfInput}/ >
+
+        </div>
+        <button onClick ={focusRef}>Focus</button>
+        <div className={toggleFlag ? 'show' : 'hide'}>
+          <Cart nameList = {list} deleteFun ={deleteFun}  />
+        </div>
    
     </div>
   
