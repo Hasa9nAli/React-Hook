@@ -11,6 +11,11 @@
 ##### in the file of simpleProject
     - there is sub program to remove the element using filtering element when clicked the the X button 
 
+
+### useState() 
+    - const [state , setState] = useState('initial value')
+    state = > the current state 
+    setState => method to make setState 
 ### LifeCycle And State
 the react is work with the form in two ways 
 
