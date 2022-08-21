@@ -1,6 +1,8 @@
 import React,{useState,  useRef} from 'react'; 
 import style from './main.style.css';
 import Cart from './cart.component';
+import InputFilter from './inputFilter.component';
+
 function Main() {
   const inputElement = useRef(null)
   const [toggleFlag , setToggleFlag] = useState(true);
@@ -58,11 +60,7 @@ email : 'name@example.com'
   const focusRef = () =>{
     inputElement.current.focus()
   }
-  const catchValueOfInput =()=> { 
-    console.log(inputElement.current.value)
-    
 
-  }
 
   
   return (
@@ -74,10 +72,7 @@ email : 'name@example.com'
         onClick={()=> setToggleFlag(!toggleFlag)}>
         {toggleFlag ? 'hide item' : 'Show Item'}
         </button>
-        <div>
-          <input type='text' placeholder='handle text' ref={inputElement} onChange={catchValueOfInput}/ >
-
-        </div>
+        <InputFilter inputElement={inputElement}  />
         <button onClick ={focusRef}>Focus</button>
         <div className={toggleFlag ? 'show' : 'hide'}>
           <Cart nameList = {list} deleteFun ={deleteFun}  />
