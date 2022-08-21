@@ -4,6 +4,8 @@ import ButtonToAddCount from './useStateHook/buttonToAddCount.component';
 import ButtonAddSubRes from './useStateHook/buttonAddSubRes.component';
 import UseStateWithObject from './useStateHook/useStateWithObject.component';
 import Main from './simpleProject/componentOfSimpleProject/main.component';
+import UseEffectHookCounter from './useEffectHook/useEffectHookCounter.component';
+
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
       {/* <ButtonToAddCount />
       <ButtonAddSubRes />
       <UseStateWithObject /> */}
-      <Main/>
+      {/* <Main/> */}
+      <UseEffectHookCounter/>
     </div>
   );
 }
