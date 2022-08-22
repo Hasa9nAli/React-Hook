@@ -8,6 +8,8 @@ import UseEffectHookCounter from './useEffectHook/useEffectHookCounter.component
 import UseEffectInput from './useEffectHook/useEffectInput.component';
 import MouseHook from './useEffectHook/mouseHook'
 import MouseContainer from './useEffectHook/mouseComtainer.component';
+import IntervalHook from './useEffectHook/intervalHook';
+import DataFetching from './useEffectHook/dataFetching';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <UseEffectInput/>
       <MouseHook/> */}
       <MouseContainer/>
+      <IntervalHook/>
+      <DataFetching/>
     </div>
   );
 }
