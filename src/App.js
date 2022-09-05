@@ -10,10 +10,21 @@ import MouseHook from './useEffectHook/mouseHook'
 import MouseContainer from './useEffectHook/mouseComtainer.component';
 import IntervalHook from './useEffectHook/intervalHook';
 import DataFetching from './useEffectHook/dataFetching';
+import ReducerTest from './useReducer/reducerTest';
+import ComponentC from './useContext/componentC'
+import ComponentW from './useContext/componentW'
 
+export const UserContext = React.createContext()
+export const ChanelContext = React.createContext()
 function App() {
   return (
     <div className="App">
+      <UserContext.Provider value = {"hello world"}>
+        <ChanelContext.Provider value = {'chanel'}>
+               <ComponentC></ComponentC>
+        </ChanelContext.Provider>
+      
+      </UserContext.Provider>
       {/* i pause the component of setStateHook File*/}
       {/* <ButtonToAddCount />
       <ButtonAddSubRes />
@@ -22,9 +33,11 @@ function App() {
       {/* <UseEffectHookCounter/>
       <UseEffectInput/>
       <MouseHook/> */}
-      <MouseContainer/>
+      {/* <MouseConStainer/>
       <IntervalHook/>
-      <DataFetching/>
+      <DataFetching/> */}
+      <ReducerTest/>
+    
     </div>
   );
 }
