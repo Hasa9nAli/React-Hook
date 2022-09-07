@@ -14,8 +14,13 @@ import ReducerTest from './useReducer/reducerTest';
 import ComponentC from './useContext/componentC'
 import ComponentW from './useContext/componentW'
 import UseContextWithUseReducer from './useContext with useReducer/useContextWithUseReducer'
+import FetchingWithUseReducer from './fetching data with useReducer/FetchingWithUseReducer'
+
 export const UserContext = React.createContext()
 export const ChanelContext = React.createContext()
+
+
+
 function App() {
   return (
     <div className="App">
@@ -38,6 +43,7 @@ function App() {
       <DataFetching/> */}
       {/* <ReducerTest/> */}
       <UseContextWithUseReducer></UseContextWithUseReducer>
+      <FetchingWithUseReducer></FetchingWithUseReducer>
     </div>
   );
 }
