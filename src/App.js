@@ -13,18 +13,18 @@ import DataFetching from './useEffectHook/dataFetching';
 import ReducerTest from './useReducer/reducerTest';
 import ComponentC from './useContext/componentC'
 import ComponentW from './useContext/componentW'
-
+import UseContextWithUseReducer from './useContext with useReducer/useContextWithUseReducer'
 export const UserContext = React.createContext()
 export const ChanelContext = React.createContext()
 function App() {
   return (
     <div className="App">
-      <UserContext.Provider value = {"hello world"}>
+      {/* <UserContext.Provider value = {"hello world"}>
         <ChanelContext.Provider value = {'chanel'}>
                <ComponentC></ComponentC>
         </ChanelContext.Provider>
       
-      </UserContext.Provider>
+      </UserContext.Provider> */}
       {/* i pause the component of setStateHook File*/}
       {/* <ButtonToAddCount />
       <ButtonAddSubRes />
@@ -36,8 +36,8 @@ function App() {
       {/* <MouseConStainer/>
       <IntervalHook/>
       <DataFetching/> */}
-      <ReducerTest/>
-    
+      {/* <ReducerTest/> */}
+      <UseContextWithUseReducer></UseContextWithUseReducer>
     </div>
   );
 }
